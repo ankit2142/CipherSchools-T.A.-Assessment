@@ -1,0 +1,30 @@
+ #include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cin>>n;
+    vector<int> prices(n);
+    for(auto &price:prices)
+        cin>>price;
+    
+    
+    int k;
+    cin>>k;
+     
+    int money;
+    cin>>money;
+
+    int canbuy = 0;
+    for(auto price:prices){
+        if (money%price==0)
+            canbuy++;
+    }
+
+    if (canbuy>=k){
+        cout << "Right";
+    } else {
+        cout << "Wrong";
+    }
+}
